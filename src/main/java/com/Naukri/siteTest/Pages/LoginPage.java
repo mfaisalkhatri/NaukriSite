@@ -23,23 +23,22 @@ public class LoginPage {
 		WebElement header = driver.findElement (By.className ("headGNBWrap"));
 		WebElement loginMenu = header.findElement (By.id("login_Layer"));
 
-		driver.manage ().timeouts ().implicitlyWait (5, TimeUnit.SECONDS);
+		driver.manage ().timeouts ().implicitlyWait (10, TimeUnit.SECONDS);
 		
 		Actions act = new Actions(driver);
 		act.moveToElement (loginMenu).click ().perform ();
 		
-		WebElement emailId = driver.findElement (By.id("eLoginNew"));
+		WebElement emailId = driver.findElement (By.name("email"));
 		act.click (emailId).sendKeys (userName).perform ();
 		
 		WebElement passWord = driver.findElement (By.id("pLogin"));
 		act.click(passWord).sendKeys (password).perform ();
 		
-		WebElement lgnBtn = driver.findElement(By.cssSelector ("form#lgnFrmNew.loginLayNew.loginLay > div.row >button.blueBtn"));
+		WebElement lgnBtn = driver.findElement(By.cssSelector ("form#lgnFrmNew.loginLayNew.loginLay>div.row>button.blueBtn"));
 		act.click(lgnBtn).perform ();
 		
 		sleep ();
 	}
-	
-	
+	        
 }
 

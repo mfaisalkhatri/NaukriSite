@@ -1,6 +1,8 @@
 package com.Naukri.siteTest.Test;
 
 import org.testng.annotations.Test;
+
+import com.Naukri.siteTest.Pages.LogOutPage;
 import com.Naukri.siteTest.Pages.LoginPage;
 import com.Naukri.siteTest.Pages.ProfilePage;
 import com.Naukri.siteTest.Pages.Setup;
@@ -9,9 +11,9 @@ public class CvUpdate extends Setup{
 
 	@Test
 	public void updateCV () {
-		String usrName = "usrName@example.com"; //Enter your email id/username here..
-		String pass = "Password123"; // Enter your password here..
-		String filePath = "E:\\Dropbox\\Dropbox\\Resume\\Latest_CV.docx"; // Enter the path of your latest Cv. 
+		String usrName = "faisal.khatri@ymail.com"; //Enter your email id/username here..
+		String pass = "Hotmail@1"; // Enter your password here..
+		String filePath = "G:\\Dropbox\\Dropbox\\Resume\\Latest_CV.docx"; // Enter the path of your latest Cv. 
 		
 		
 		System.out.println ("Test Begins!!");
@@ -24,8 +26,12 @@ public class CvUpdate extends Setup{
 		ProfilePage pg = new ProfilePage(driver);
 		pg.UpdateCV (filePath);
 		
+		System.out.println ("Latest CV Uploaded to Naukri.com!! Now Logging Out!");
 		
-		System.out.println ("Latest CV Uploaded to Naukri.com!!");
+		LogOutPage logout = new LogOutPage (driver);
+		logout.logOutSite ();
+		
+		System.out.println ("Logged out successfully!!");
 	}
 	
 }
