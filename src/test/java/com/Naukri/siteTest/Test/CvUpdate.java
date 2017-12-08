@@ -11,8 +11,8 @@ public class CvUpdate extends Setup{
 
 	@Test
 	public void updateCV () {
-		String usrName = "faisal.khatri@ymail.com"; //Enter your email id/username here..
-		String pass = "Hotmail@1"; // Enter your password here..
+		String usrName = "username@example.com"; //Enter your email id/username here..
+		String pass = "Password123"; // Enter your password here..
 		String filePath = "G:\\Dropbox\\Dropbox\\Resume\\Latest_CV.docx"; // Enter the path of your latest Cv. 
 		
 		
