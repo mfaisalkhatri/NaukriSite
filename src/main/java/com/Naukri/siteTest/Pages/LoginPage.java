@@ -34,7 +34,7 @@ public class LoginPage {
 		WebElement passWord = driver.findElement (By.id("pLogin"));
 		act.click(passWord).sendKeys (password).perform ();
 		
-		WebElement lgnBtn = driver.findElement(By.cssSelector ("form#lgnFrmNew.loginLayNew.loginLay>div.row>button.blueBtn"));
+		WebElement lgnBtn = driver.findElement(By.cssSelector ("form#lgnFrm.loginLay>div.row>button.blueBtn"));
 		act.click(lgnBtn).perform ();
 		
 		sleep ();

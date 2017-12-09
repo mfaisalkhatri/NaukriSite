@@ -33,9 +33,7 @@ public class Setup {
 		windowHandling ();
 	}
 	
-	
-	
-	
+
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
