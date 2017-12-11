@@ -22,11 +22,13 @@ public class Setup {
 			.getResource (exe)
 			.getPath ();
 		final String webSite = "http://www.naukri.com";
+		final String binaryPath = "C:\\Users\\DELL\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe";
 		
 		System.setProperty("webdriver.chrome.driver", path);
-		ChromeOptions ops = new ChromeOptions();
-		ops.addArguments ("--disable-notifications");
-		driver = new ChromeDriver (ops);
+		ChromeOptions chromeOpt= new ChromeOptions();
+		chromeOpt.setBinary(binaryPath);
+		
+		driver = new ChromeDriver (chromeOpt);
 		driver.get(webSite);
 		driver.manage ().timeouts ().implicitlyWait (10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
